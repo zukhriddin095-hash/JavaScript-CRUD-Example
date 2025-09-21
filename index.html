@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TodoApp-in-js</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+			integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<header class="shadow-sm p-2">
+			<div class="container">
+				<div class="d-flex justify-content-between align-items-center">
+					<a style="width: 200px; height: 65px" href="#"
+						><img
+							width="100%"
+							height="100%"
+							src="./image/logo.jpg"
+							alt="logo"
+							class="rounded-pill w-25"
+					/></a>
+
+					<ul class="d-flex gap-5">
+						<li><a class="fw-bold text-muted" href="#">home</a></li>
+						<li><a class="fw-bold text-muted" href="#">users</a></li>
+						<li><a class="fw-bold text-muted" href="#">contact us</a></li>
+						<li><a class="fw-bold text-muted" href="#">securty</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div class="container">
+				<div
+					class="users-title d-flex justify-content-between align-items-center mt-3"
+				>
+					<h3 class="fst-italic text-bold">Peoples in my GYM</h3>
+					<button
+						class="btn btn-primary"
+						data-bs-toggle="modal"
+						data-bs-target="#exampleModal"
+					>
+						+
+					</button>
+					<h2 class="text-bold count-users"></h2>
+				</div>
+
+				<div class="users__rows mt-5"></div>
+
+				<div
+					class="modal fade"
+					id="exampleModal"
+					tabindex="-1"
+					aria-hidden="true"
+				>
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">Edit User</h5>
+								<button
+									type="button"
+									class="btn-close"
+									data-bs-dismiss="modal"
+									aria-label="Close"
+								></button>
+							</div>
+
+							<form id="form-data">
+								<div class="modal-body">
+									<div class="mb-3">
+										<label for="form-name" class="form-label">Name</label>
+										<input
+											type="text"
+											id="form-name"
+											name="name"
+											class="form-control"
+										/>
+									</div>
+
+									<div class="mb-3">
+										<label for="form-title" class="form-label">Title</label>
+										<input
+											type="text"
+											id="form-title"
+											name="title"
+											class="form-control"
+										/>
+									</div>
+								</div>
+
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Close
+									</button>
+									<button type="submit" class="btn btn-primary">
+										Save changes
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="users-pagination mt-5 d-flex align-items-center justify-content-center"
+				>
+					<nav aria-label="...">
+						<ul class="pagination">
+							<li class="Previous">
+								<a class="page-link">Previous</a>
+							</li>
+							<div
+								class="pageCount d-flex gap-2 justify-content-space-between"
+							></div>
+							<li class="Next">
+								<a class="page-link" href="#">Next</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</main>
+		<footer></footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+			crossorigin="anonymous"
+		></script>
+		<script src="./main.js"></script>
+	</body>
+</html>
