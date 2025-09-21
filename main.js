@@ -100,20 +100,18 @@ nextBtn.addEventListener('click', e => {
 //  User card
 function getCardUsers({ avatar, birthday, id, married, name, title }) {
 	return `
-    <div class="card" style="width: 18rem">
-      <img class='img-card'
-        src="${
+  
+	<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div class="card h-100">
+        <img  src="${
 					avatar ||
 					'https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-image-icon-default-avatar-profile-icon-social-media-user-vector-image-209162840.jpg'
-				}"
-        class="card-img-top"
-        alt="..."/>
-      <div class="card-body">
-        <h5 class="card-title">${name}</h5>
-        <p class="card-text">${title}</p>
-        <p class="card-text">${birthday}</p>
-        <p class="card-text">${id}</p>
-        <button  
+				}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">${name}</h5>
+          <p class="card-text">${title}</p>
+					<p class="card-text">${birthday}</p>
+           <button  
 					onclick='editUser(${id})'
 				 	type="button" 
 					class="btn btn-primary ms-3"
@@ -125,8 +123,7 @@ function getCardUsers({ avatar, birthday, id, married, name, title }) {
         <button onclick='deleteUser(${id})' type="button" class="btn btn-danger ms-5" data-bs-toggle="modal" data-bs-target="#deleteModal">
           <i class="fa-solid fa-trash"></i> Delete
         </button>
-      </div>
-    </div>`
+        </div>`
 }
 
 getDataCount()

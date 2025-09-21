@@ -10,40 +10,7 @@
 	box-sizing: border-box;
 }
 
-.users__rows {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: 30px;
-}
 .img-card {
-	width: 286px !important;
-	height: 286px !important;
-}
-
-.btn.loading {
-	position: relative;
-	pointer-events: none; /* bosib bo‘lmaydi */
-	opacity: 0.8;
-}
-
-.btn.loading::after {
-	content: '';
-	position: absolute;
-	right: 10px; /* matn yonida chiqadi */
-	top: 50%;
-	transform: translateY(-50%);
-	width: 1rem;
-	height: 1rem;
-	border: 2px solid #fff;
-	border-top-color: transparent;
-	border-radius: 50%;
-	animation: spin 0.6s linear infinite;
-}
-
-@keyframes spin {
-	to {
-		transform: translateY(-50%) rotate(360deg);
-	}
+	max-width: 286px !important;
+	max-height: 286px !important;
 }
